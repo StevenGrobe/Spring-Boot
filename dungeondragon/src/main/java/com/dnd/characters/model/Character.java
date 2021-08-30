@@ -1,22 +1,31 @@
 package com.dnd.characters.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="characters")
 public class Character {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Column(name = "nom", length = 255, nullable = false)
     private String nom;
+    @Column(name = "job", length = 255, nullable = false)
     private String job;
+    @Column(name = "hp", length = 20, nullable = false)
     private int hp;
 
     public Character() {
     }
 
-    public Character(int id, String nom, String job, int hp) {
+    public Character(Integer id, String nom, String job, int hp) {
         this.id = id;
         this.nom = nom;
         this.job = job;
         this.hp = hp;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

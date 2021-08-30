@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class CharacterController {
@@ -19,23 +20,23 @@ public class CharacterController {
     }
 
     @GetMapping(value = "/Personnages/{id}")
-    public Character afficherUnPersonnage(@PathVariable int id) {
+    public Optional<Character> afficherUnPersonnage(@PathVariable Integer id) {
         return characterDao.findById(id);
     }
 
     @PostMapping(value = "Personnages")
-    public void ajouterPersonnage(@RequestBody Character character) {
-        characterDao.save(character);
+    public Character ajouterPersonnage(@RequestBody Character character) {
+        return characterDao.save(character);
     }
 
-    @PutMapping(value = "/Personnages/{id}")
-    public ResponseEntity<Character> modiferUnPersonnage(@PathVariable int id, @RequestBody Character character) {
-        characterDao.update(character);
-        return null;
-    }
+   // @PutMapping(value = "/Personnages/{id}")
+   // public ResponseEntity<Character> modiferUnPersonnage(@PathVariable int id, @RequestBody Character character) {
+   //     characterDao.update(character);
+   //     return null;
+   // }
 
     @DeleteMapping(value = "/Personnages/{id}")
-    public void supprimerUnCharacter(@PathVariable int id) {
+    public void supprimerUnCharacter(@PathVariable Integer id) {
         characterDao.deleteById(id);
     }
 

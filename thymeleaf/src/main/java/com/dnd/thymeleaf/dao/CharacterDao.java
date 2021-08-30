@@ -7,5 +7,5 @@ public interface CharacterDao {
     public Character findById(int id);
     public Character save(Character character);
     // public Character update(Character character);
-    // public Character deleteById(int id);
+    // public void delete(int id);
 }

@@ -23,6 +23,11 @@
                 <td th:utext="${Character.nom}">...</td>
                 <td th:utext="${Character.job}">...</td>
                 <td th:utext="${Character.hp}">...</td>
+                <td>
+                    <form th:action="@{/characterDetails/{id}(id=${Character.id})}" th:method="delete">
+                        <input type="submit" value="Delete" />
+                    </form>
+                </td>
             </tr>
         </table>
     </div>

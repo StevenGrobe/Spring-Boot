@@ -91,4 +91,11 @@ public class MainController {
         System.out.println(c);
         return "characterDetails";
     }
+
+    @DeleteMapping(value = {"/characterDetails/{id}"})
+    public String delete(@PathVariable int id) {
+        String url = "http://localhost:8081/Personnages/";
+        restTemplate.delete(url+id);
+        return "redirect:/characterList";
+    }
 }
