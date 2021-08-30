@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Character List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Character List</h1>
+<a href="addCharacter">Add Character</a>
+<br/><br/>
+<div>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Hp</th>
+        </tr>
+        <tr th:each ="character : ${Character}">
+            <td><a th:utext="${character.id}" + th:href="@{'/characterDetails/' + ${character.id}}"></a></td>
+            <td th:utext="${character.nom}">...</td>
+            <td th:utext="${character.job}">...</td>
+            <td th:utext="${character.hp}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
