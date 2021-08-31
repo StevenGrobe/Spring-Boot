@@ -13,3 +13,25 @@ table {
 table th, table td {
     padding: 5px;
 }
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 3rem;
+    text-align: right;
+}
+
+input {
+  display: inline-block;
+  float: left;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+select {
+  display: inline-block;
+  float: left;
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+}

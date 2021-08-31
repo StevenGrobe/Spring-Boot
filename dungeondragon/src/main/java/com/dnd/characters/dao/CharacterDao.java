@@ -12,6 +12,5 @@ public interface CharacterDao extends JpaRepository <Character, Integer> {
     public List<Character>findAll();
     public Optional <Character> findById(Integer id);
     public Character save(Character character);
-    // public Character update(Character character);
     public void deleteById(Integer id);
 }

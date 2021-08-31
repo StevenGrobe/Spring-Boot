@@ -22,80 +22,51 @@ public class MainController {
     @Autowired
     private RestTemplate restTemplate;
 
-    // Injectez (inject) via application.properties.
-    @Value("${welcome.message}")
-    private String message;
-
     @Value("${error.message}")
     private String errorMessage;
 
-    @RequestMapping(value = { "/", "/index" }, method = RequestMethod.GET)
-    public String index(Model model) {
-
-        model.addAttribute("message", message);
-        return "index";
-    }
-
-    @RequestMapping(value = { "/characterList" }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/", "/characterList" }, method = RequestMethod.GET)
     public String characterList(Model model) {
-        String url = "http://localhost:8081/Personnages";
-        List<Character> c = restTemplate.getForObject(url,List.class);
-        model.addAttribute("Character", c);
+        String api = "http://localhost:8081/Personnages";
+        List<Character> c = restTemplate.getForObject(api,List.class);
+        model.addAttribute("characters", c);
         return "characterList";
     }
 
     @RequestMapping(value = { "/addCharacter" }, method = RequestMethod.GET)
     public String showAddCharacterPage(Model model) {
-
         CharacterForm characterForm = new CharacterForm();
         model.addAttribute("characterForm", characterForm);
-
         return "addCharacter";
     }
 
     @RequestMapping(value = { "/addCharacter" }, method = RequestMethod.POST)
     public String saveCharacter(Model model, @ModelAttribute("characterForm") CharacterForm characterForm) {
-        String url = "http://localhost:8081/Personnages/";
-        CharacterForm cform = restTemplate.postForObject(url, characterForm, CharacterForm.class);
-        String name = characterForm.getNom();
-        String job = characterForm.getJob();
-        int hp = characterForm.getHp();
+        String api = "http://localhost:8081/Personnages/";
+        restTemplate.postForObject(api, characterForm, CharacterForm.class);
+        Character newCharacter = new Character(characterForm.getId(), characterForm.getNom(), characterForm.getJob(), characterForm.getHp());
+        characterDao.save(newCharacter);
+        return "redirect:/characterList";
 
-        int max = characterDao.findAll().stream()
-                .map(personnage -> personnage.getId())
-                .max(Integer::compare)
-                .orElse(0);
-
-        int Id = max+1;
-        String Nom = characterForm.getNom();
-        String Job = characterForm.getJob();
-        int Hp = characterForm.getHp();
-
-        if (Nom != null && Nom.length() > 0) {
-            Character newCharacter = new Character(Id, Nom, Job, Hp);
-            characterDao.save(newCharacter);
-
-            return "redirect:/characterList";
-        }
-
-        model.addAttribute("errorMessage", errorMessage);
-        return "addCharacter";
     }
 
     @RequestMapping(value = {"/characterDetails/{id}"}, method = RequestMethod.GET)
     public String afficherUnPersonnage(Model model, @PathVariable int id) {
-        String url = "http://localhost:8081/Personnages/";
-        Character c = restTemplate.getForObject(url + id,Character.class);
-
+        String api = "http://localhost:8081/Personnages/";
+        Character c = restTemplate.getForObject(api + id,Character.class);
         model.addAttribute("Character", c);
-        System.out.println(c);
         return "characterDetails";
     }
 
     @DeleteMapping(value = {"/characterDetails/{id}"})
     public String delete(@PathVariable int id) {
-        String url = "http://localhost:8081/Personnages/";
-        restTemplate.delete(url+id);
+        String api = "http://localhost:8081/Personnages/";
+        restTemplate.delete(api+id);
         return "redirect:/characterList";
+    }
+    @PutMapping(value = {"/characterDetails/{id}"})
+    public String modifierPersonnage(@PathVariable int id, Character character) {
+        characterDao.save(character);
+        return "characterDetails";
     }
 }

@@ -17,7 +17,7 @@
             <th>Job</th>
             <th>Hp</th>
         </tr>
-        <tr th:each ="character : ${Character}">
+        <tr th:each ="character : ${characters}">
             <td><a th:utext="${character.id}" + th:href="@{'/characterDetails/' + ${character.id}}"></a></td>
             <td th:utext="${character.nom}">...</td>
             <td th:utext="${character.job}">...</td>

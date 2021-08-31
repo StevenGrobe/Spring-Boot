@@ -5,30 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8abf6740-345a-492f-a924-6c1e9a77202e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dnd/characters/DungeondragonApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dnd/characters/DungeondragonApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dnd/characters/controller/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dnd/characters/controller/CharacterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dnd/characters/dao/CharacterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dnd/characters/dao/CharacterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dnd/characters/dao/CharacterDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dnd/characters/model/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dnd/characters/model/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dnd/characters/DungeondragonApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dnd/characters/DungeondragonApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dnd/characters/controller/CharacterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dnd/characters/controller/CharacterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dnd/characters/dao/CharacterDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dnd/characters/dao/CharacterDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dnd/characters/dao/CharacterDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dnd/characters/model/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dnd/characters/model/Character.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/java/com/dnd/thymeleaf/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/java/com/dnd/thymeleaf/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/java/com/dnd/thymeleaf/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/java/com/dnd/thymeleaf/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/java/com/dnd/thymeleaf/dao/CharacterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/java/com/dnd/thymeleaf/dao/CharacterDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/java/com/dnd/thymeleaf/dao/CharacterDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/java/com/dnd/thymeleaf/dao/CharacterDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/resources/static/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/resources/static/css/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/resources/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/resources/templates/addCharacter.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/resources/templates/addCharacter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/resources/templates/characterDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/resources/templates/characterDetails.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../thymeleaf/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/resources/templates/characterList.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/src/main/resources/templates/characterList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thymeleaf/src/main/resources/templates/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../thymeleaf/target/classes/com/dnd/thymeleaf/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/target/classes/com/dnd/thymeleaf/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../thymeleaf/target/classes/com/dnd/thymeleaf/dao/CharacterDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/target/classes/com/dnd/thymeleaf/dao/CharacterDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thymeleaf/target/classes/static/css/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/target/classes/static/css/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thymeleaf/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thymeleaf/target/classes/templates/addCharacter.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/target/classes/templates/addCharacter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../thymeleaf/target/classes/templates/characterDetails.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thymeleaf/target/classes/templates/characterDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thymeleaf/target/classes/templates/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

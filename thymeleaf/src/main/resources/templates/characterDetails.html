@@ -17,6 +17,7 @@
                 <th>Name</th>
                 <th>Job</th>
                 <th>Hp</th>
+                <th>Option</th>
             </tr>
             <tr>
                 <td th:utext="${Character.id}">...</td>
@@ -26,11 +27,30 @@
                 <td>
                     <form th:action="@{/characterDetails/{id}(id=${Character.id})}" th:method="delete">
                         <input type="submit" value="Delete" />
+                        <br/><br/>
                     </form>
                 </td>
             </tr>
         </table>
     </div>
-
+<br/><br/>
+    <div>
+        <form th:action="@{/addCharacter}"
+              th:object="${characterForm}" method="POST">
+            <div>
+                <input type="hidden" th:field="${Character.id}"/>
+                <label>Nom:</label>
+                <input type="text" th:field="${Character.nom}"/>
+                <br/><br/>
+                <label>Job:</label>
+                <input type="text" th:field="${Character.job}"/>
+                <br/><br/>
+                <label>Hp :</label>
+                <input type="text" th:field="${Character.hp}"/>
+                <br/><br/>
+                <input type="submit" value="Modify" />
+            </div>
+        </form>
+    </div>
 </body>
 </html>

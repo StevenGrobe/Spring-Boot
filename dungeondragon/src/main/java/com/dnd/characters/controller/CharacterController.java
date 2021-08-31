@@ -29,12 +29,6 @@ public class CharacterController {
         return characterDao.save(character);
     }
 
-   // @PutMapping(value = "/Personnages/{id}")
-   // public ResponseEntity<Character> modiferUnPersonnage(@PathVariable int id, @RequestBody Character character) {
-   //     characterDao.update(character);
-   //     return null;
-   // }
-
     @DeleteMapping(value = "/Personnages/{id}")
     public void supprimerUnCharacter(@PathVariable Integer id) {
         characterDao.deleteById(id);

@@ -1,1 +1,6 @@
-INSERT INTO characters(nom, hp, job) VALUES ('steven',5,'mage')
+INSERT INTO characters(nom, hp, job) VALUES ('Parpaing',25,'warrior')
+INSERT INTO characters(nom, hp, job) VALUES ('Raton-Laveur',6,'mage')
+INSERT INTO characters(nom, hp, job) VALUES ('Phytoplantkon',11,'warrior')
+INSERT INTO characters(nom, hp, job) VALUES ('Caillou',16,'warrior')
+INSERT INTO characters(nom, hp, job) VALUES ('Bourdon',3,'mage')
+INSERT INTO characters(nom, hp, job) VALUES ('Cube de Sucre',5,'mage')
